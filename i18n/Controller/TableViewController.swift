@@ -47,6 +47,16 @@ class TableViewController: UITableViewController {
         return UITableViewCell()
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            L10nLanguage.setAppleLAnguageTo(lang: "en_US")
+        } else if indexPath.row == 1 {
+            L10nLanguage.setAppleLAnguageTo(lang: "ar")
+        } else if indexPath.row == 2 {
+            L10nLanguage.setAppleLAnguageTo(lang: "ru_RU")
+        }
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.

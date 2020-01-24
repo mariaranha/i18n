@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="00H-pk-xSG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="00H-pk-xSG">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,9 +21,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="coke-can" translatesAutoresizingMaskIntoConstraints="NO" id="86o-V8-0ii">
-                                <rect key="frame" x="0.0" y="183" width="248" height="261"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coke-can" translatesAutoresizingMaskIntoConstraints="NO" id="86o-V8-0ii">
+                                <rect key="frame" x="8" y="183" width="196" height="220"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="220" id="Itm-Gx-Jdr"/>
+                                    <constraint firstAttribute="width" constant="196" id="o1r-qI-Yhc"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lata de Coca-Cola no Brasil" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pcz-dY-ocf">
                                 <rect key="frame" x="204" y="270" width="254" height="87"/>
@@ -33,7 +36,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wcl-zx-UtG">
-                                <rect key="frame" x="124" y="488" width="124" height="44"/>
+                                <rect key="frame" x="145" y="495" width="124" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Idioma"/>
                                 <connections>
@@ -41,7 +44,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lh5-XU-kMv">
-                                <rect key="frame" x="124" y="573" width="124" height="44"/>
+                                <rect key="frame" x="145" y="570" width="124" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Mudar tela"/>
                             </button>
@@ -52,6 +55,8 @@
                             <constraint firstItem="25e-pp-o3Z" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="RXX-w6-7Yh"/>
                             <constraint firstItem="25e-pp-o3Z" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="dth-2D-Bnq"/>
                             <constraint firstItem="25e-pp-o3Z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="flT-bo-EXq"/>
+                            <constraint firstItem="86o-V8-0ii" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="hWL-Xl-iqY"/>
+                            <constraint firstItem="86o-V8-0ii" firstAttribute="top" secondItem="25e-pp-o3Z" secondAttribute="bottom" constant="56" id="z6S-68-jnM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

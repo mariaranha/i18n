@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BA00CE423DB3543003A4625 /* L10nLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA00CE323DB3543003A4625 /* L10nLanguage.swift */; };
 		9C91F50823DB12E0005221D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C91F50723DB12E0005221D3 /* AppDelegate.swift */; };
 		9C91F50A23DB12E0005221D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C91F50923DB12E0005221D3 /* SceneDelegate.swift */; };
 		9C91F50C23DB12E0005221D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C91F50B23DB12E0005221D3 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0BA00CE323DB3543003A4625 /* L10nLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = L10nLanguage.swift; sourceTree = "<group>"; };
 		9C91F50423DB12E0005221D3 /* i18n.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = i18n.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C91F50723DB12E0005221D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C91F50923DB12E0005221D3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				9C91F51D23DB14C7005221D3 /* Controller */,
 				9C91F50723DB12E0005221D3 /* AppDelegate.swift */,
 				9C91F50923DB12E0005221D3 /* SceneDelegate.swift */,
+				0BA00CE323DB3543003A4625 /* L10nLanguage.swift */,
 				9C91F50D23DB12E0005221D3 /* Main.storyboard */,
 				9C91F51023DB12E1005221D3 /* Assets.xcassets */,
 				9C91F51223DB12E1005221D3 /* LaunchScreen.storyboard */,
@@ -163,6 +166,7 @@
 				9C91F50C23DB12E0005221D3 /* ViewController.swift in Sources */,
 				9C91F50823DB12E0005221D3 /* AppDelegate.swift in Sources */,
 				9C91F50A23DB12E0005221D3 /* SceneDelegate.swift in Sources */,
+				0BA00CE423DB3543003A4625 /* L10nLanguage.swift in Sources */,
 				9CFD437723DB19AE00E6D277 /* Country.swift in Sources */,
 				9CFD437123DB164A00E6D277 /* TableViewController.swift in Sources */,
 			);
