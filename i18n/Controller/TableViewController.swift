@@ -50,10 +50,13 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
             L10nLanguage.setAppleLAnguageTo(lang: "en_US")
+//            UIView.appearance().semanticContentAttribute = .forceLeftToRight
         } else if indexPath.row == 1 {
             L10nLanguage.setAppleLAnguageTo(lang: "ar")
+//            UIView.appearance().semanticContentAttribute = .forceRightToLeft
         } else if indexPath.row == 2 {
             L10nLanguage.setAppleLAnguageTo(lang: "ru_RU")
+//            UIView.appearance().semanticContentAttribute = .forceLeftToRight
         }
     }
     

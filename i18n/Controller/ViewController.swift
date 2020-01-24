@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let dateFormatterGet = DateFormatter()
-        dateFormatterGet.locale = Locale(identifier: "en_US") //set by the table view controller
+        dateFormatterGet.locale = Locale(identifier: L10nLanguage.currentAppleLanguageFull()) //set by the table view controller
         dateFormatterGet.dateStyle = .medium
         dateFormatterGet.timeStyle = .short
         dateLabel.text = dateFormatterGet.string(from: Date())
