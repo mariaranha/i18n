@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
     
     override func viewWillAppear(_ animated: Bool) {
         if (L10nLanguage.currentAppleLanguageFull() == "ar"){
@@ -25,17 +26,17 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let dateFormatterGet = DateFormatter()
-        dateFormatterGet.locale = Locale(identifier: L10nLanguage.currentAppleLanguageFull()) //set by the table view controller
+        dateFormatterGet.locale = Locale(identifier: "en_US") //change to localizable
         dateFormatterGet.dateStyle = .medium
         dateFormatterGet.timeStyle = .short
         dateLabel.text = dateFormatterGet.string(from: Date())
         
-        if (L10nLanguage.currentAppleLanguageFull() == "ar"){
-            self.navigationController?.navigationBar.semanticContentAttribute = .forceRightToLeft
-            self.navigationController?.view.semanticContentAttribute = .forceRightToLeft
-        }
+
     }
 
 
+    @IBAction func updateScreen(_ sender: Any) {
+        descriptionLabel.text = ("Банка кока-колы в россии")
+    }
 }
 

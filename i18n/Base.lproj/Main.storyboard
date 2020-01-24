@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="00H-pk-xSG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="00H-pk-xSG">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,47 +22,47 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coke-can" translatesAutoresizingMaskIntoConstraints="NO" id="86o-V8-0ii">
-                                <rect key="frame" x="8" y="183" width="196" height="220"/>
+                                <rect key="frame" x="0.0" y="173" width="219" height="232"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="220" id="Itm-Gx-Jdr"/>
-                                    <constraint firstAttribute="width" constant="196" id="o1r-qI-Yhc"/>
+                                    <constraint firstAttribute="height" constant="232" id="dDX-c7-JAT"/>
+                                    <constraint firstAttribute="width" constant="219" id="yVj-nv-Qiv"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lata de Coca-Cola no Brasil" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pcz-dY-ocf">
-                                <rect key="frame" x="204" y="270" width="254" height="87"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coke can in United States of America" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pcz-dY-ocf">
+                                <rect key="frame" x="235" y="256" width="171" height="75.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wcl-zx-UtG">
-                                <rect key="frame" x="145" y="495" width="124" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Idioma"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wcl-zx-UtG">
+                                <rect key="frame" x="145" y="511" width="124" height="30"/>
+                                <state key="normal" title="Language"/>
                                 <connections>
-                                    <segue destination="RQJ-J6-xw5" kind="show" id="0mK-Cc-Yto"/>
+                                    <segue destination="RQJ-J6-xw5" kind="show" id="f19-bT-FXK"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lh5-XU-kMv">
-                                <rect key="frame" x="145" y="570" width="124" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Mudar tela"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="Pcz-dY-ocf" firstAttribute="leading" secondItem="86o-V8-0ii" secondAttribute="trailing" constant="16" id="5nD-xy-gf8"/>
+                            <constraint firstAttribute="trailing" secondItem="Pcz-dY-ocf" secondAttribute="trailing" constant="8" id="6jv-sR-RBK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="25e-pp-o3Z" secondAttribute="trailing" constant="8" id="CVm-kT-jKI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wcl-zx-UtG" secondAttribute="trailing" constant="145" id="Ihi-P6-Sfs"/>
+                            <constraint firstItem="wcl-zx-UtG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="145" id="Kpl-u1-pKF"/>
+                            <constraint firstItem="86o-V8-0ii" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ptb-1F-Kio"/>
                             <constraint firstItem="25e-pp-o3Z" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="RXX-w6-7Yh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wcl-zx-UtG" secondAttribute="bottom" constant="321" id="Yrw-OK-YG7"/>
+                            <constraint firstItem="Pcz-dY-ocf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="168" id="Z54-Sq-QTn"/>
                             <constraint firstItem="25e-pp-o3Z" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="dth-2D-Bnq"/>
                             <constraint firstItem="25e-pp-o3Z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="flT-bo-EXq"/>
-                            <constraint firstItem="86o-V8-0ii" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="hWL-Xl-iqY"/>
-                            <constraint firstItem="86o-V8-0ii" firstAttribute="top" secondItem="25e-pp-o3Z" secondAttribute="bottom" constant="56" id="z6S-68-jnM"/>
+                            <constraint firstItem="86o-V8-0ii" firstAttribute="top" secondItem="25e-pp-o3Z" secondAttribute="bottom" constant="46" id="gx8-OS-yfq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="V5e-wq-U23"/>
                     <connections>
                         <outlet property="dateLabel" destination="25e-pp-o3Z" id="hGm-zp-tw4"/>
+                        <outlet property="descriptionLabel" destination="Pcz-dY-ocf" id="A0b-nX-q0c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

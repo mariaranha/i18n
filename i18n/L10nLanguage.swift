@@ -32,4 +32,8 @@ class L10nLanguage {
     class var isRTL: Bool {
         return L10nLanguage.currentAppleLanguage() == "ar"
     }
+    
+    class func isRTLDirect() -> Bool {
+        return UIApplication.shared.userInterfaceLayoutDirection == .rightToLeft
+    }
 }
