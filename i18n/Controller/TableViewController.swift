@@ -11,7 +11,7 @@ import UIKit
 class TableViewController: UITableViewController {
 
    var countries = [
-        Country(name: "Português", image: UIImage(named: "bandeira-BR")),
+        Country(name: "Inglês", image: UIImage(named: "bandeira-US")),
         Country(name: "Árabe", image: UIImage(named: "bandeira-AR")),
         Country(name: "Russo", image: UIImage(named: "bandeira-RU"))
                     ]
@@ -58,6 +58,9 @@ class TableViewController: UITableViewController {
             L10nLanguage.setAppleLAnguageTo(lang: "ru_RU")
 //            UIView.appearance().semanticContentAttribute = .forceLeftToRight
         }
+        
+        _ = navigationController?.popViewController(animated: true)
+
     }
     
 
