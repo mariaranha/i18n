@@ -56,6 +56,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="V5e-wq-U23"/>
+                    <connections>
+                        <outlet property="dateLabel" destination="25e-pp-o3Z" id="hGm-zp-tw4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

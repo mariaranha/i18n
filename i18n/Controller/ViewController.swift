@@ -10,9 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var dateLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        let dateFormatterGet = DateFormatter()
+        dateFormatterGet.locale = Locale(identifier: "en_US") //change to localizable
+        dateFormatterGet.dateStyle = .medium
+        dateFormatterGet.timeStyle = .short
+        dateLabel.text = dateFormatterGet.string(from: Date())
+        
+
     }
 
 
