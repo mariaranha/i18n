@@ -47,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C7E5EAA23DE437B00ABC337 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9CFD437623DB19AE00E6D277 /* Country.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		9C91F4FB23DB12E0005221D3 = {
 			isa = PBXGroup;
 			children = (
@@ -66,10 +74,12 @@
 		9C91F50623DB12E0005221D3 /* i18n */ = {
 			isa = PBXGroup;
 			children = (
+				9C7E5EAA23DE437B00ABC337 /* Model */,
 				9C91F51D23DB14C7005221D3 /* Controller */,
 				9C91F50723DB12E0005221D3 /* AppDelegate.swift */,
-				9C91F50923DB12E0005221D3 /* SceneDelegate.swift */,
 				0BA00CE323DB3543003A4625 /* L10nLanguage.swift */,
+				9CFD437323DB168800E6D277 /* TableViewCell.xib */,
+				9C91F50923DB12E0005221D3 /* SceneDelegate.swift */,
 				9C91F50D23DB12E0005221D3 /* Main.storyboard */,
 				9C91F51023DB12E1005221D3 /* Assets.xcassets */,
 				9C91F51223DB12E1005221D3 /* LaunchScreen.storyboard */,
@@ -83,9 +93,7 @@
 			children = (
 				9C91F50B23DB12E0005221D3 /* ViewController.swift */,
 				9CFD437023DB164A00E6D277 /* TableViewController.swift */,
-				9CFD437623DB19AE00E6D277 /* Country.swift */,
 				9CFD437223DB168800E6D277 /* TableViewCell.swift */,
-				9CFD437323DB168800E6D277 /* TableViewCell.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

@@ -13,13 +13,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
     
     override func viewWillAppear(_ animated: Bool) {
-        if (L10nLanguage.currentAppleLanguageFull() == "ar"){
-            self.navigationController?.navigationBar.semanticContentAttribute = .forceRightToLeft
-            self.navigationController?.view.semanticContentAttribute = .forceRightToLeft
-        } else {
-            self.navigationController?.navigationBar.semanticContentAttribute = .forceLeftToRight
-            self.navigationController?.view.semanticContentAttribute = .forceLeftToRight
-        }
+//        if (L10nLanguage.currentAppleLanguageFull() == "ar"){
+//            self.navigationController?.navigationBar.semanticContentAttribute = .forceRightToLeft
+//            self.navigationController?.view.semanticContentAttribute = .forceRightToLeft
+//        } else {
+//            self.navigationController?.navigationBar.semanticContentAttribute = .forceLeftToRight
+//            self.navigationController?.view.semanticContentAttribute = .forceLeftToRight
+//        }
+        
     }
     
     override func viewDidLoad() {
@@ -29,11 +30,7 @@ class ViewController: UIViewController {
         dateFormatterGet.dateStyle = .medium
         dateFormatterGet.timeStyle = .short
         dateLabel.text = dateFormatterGet.string(from: Date())
-        
-        if (L10nLanguage.currentAppleLanguageFull() == "ar"){
-            self.navigationController?.navigationBar.semanticContentAttribute = .forceRightToLeft
-            self.navigationController?.view.semanticContentAttribute = .forceRightToLeft
-        }
+
     }
 
 
