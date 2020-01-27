@@ -26,6 +26,9 @@ class TableViewCell: UITableViewCell {
         let pan = UIPanGestureRecognizer(target: self, action: #selector(swipeAction(gestureRecognizer:)))
         pan.delegate = self
         self.addGestureRecognizer(pan)
+        if L10nLanguage.currentAppleLanguageFull() == "ar" {
+            arrowImage.image = arrowImage.image?.imageFlippedForRightToLeftLayoutDirection()
+        }
     }
     
     override func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
