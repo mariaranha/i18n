@@ -26,6 +26,7 @@ class TableViewCell: UITableViewCell {
         let pan = UIPanGestureRecognizer(target: self, action: #selector(swipeAction(gestureRecognizer:)))
         pan.delegate = self
         self.addGestureRecognizer(pan)
+        
     }
     
     override func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
