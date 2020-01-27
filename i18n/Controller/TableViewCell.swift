@@ -42,10 +42,10 @@ class TableViewCell: UITableViewCell {
         
         
         if gestureRecognizer.state == .changed {
-            let translation = gestureRecognizer.translation(in: self).x
+            let translation = abs(gestureRecognizer.translation(in: self).x)
             UIView.animate(withDuration: 01, delay: 0, options: .allowUserInteraction, animations: {
                 if self.shouldMove(translation: translation) {
-                    self.moveConstraint.constant -= translation
+                    self.moveConstraint.constant += translation
                 }
                 
                 self.layoutIfNeeded()
