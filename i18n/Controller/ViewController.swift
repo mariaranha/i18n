@@ -14,30 +14,29 @@ class ViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     
     override func viewWillAppear(_ animated: Bool) {
-//        if (L10nLanguage.currentAppleLanguageFull() == "ar"){
-//            self.navigationController?.navigationBar.semanticContentAttribute = .forceRightToLeft
-//            self.navigationController?.view.semanticContentAttribute = .forceRightToLeft
-//        } else {
-//            self.navigationController?.navigationBar.semanticContentAttribute = .forceLeftToRight
-//            self.navigationController?.view.semanticContentAttribute = .forceLeftToRight
-//        }
+        
+        //back button
+        if (L10nLanguage.currentAppleLanguageFull() == "ar"){
+            self.navigationController?.navigationBar.semanticContentAttribute = .forceRightToLeft
+            self.navigationController?.view.semanticContentAttribute = .forceRightToLeft
+        } else {
+            self.navigationController?.navigationBar.semanticContentAttribute = .forceLeftToRight
+            self.navigationController?.view.semanticContentAttribute = .forceLeftToRight
+        }
+        
+        //date formatter
+        let dateFormatterGet = DateFormatter()
+        dateFormatterGet.locale = Locale(identifier: L10nLanguage.currentAppleLanguageFull()) //change to localizable
+        dateFormatterGet.dateStyle = .medium
+        dateFormatterGet.timeStyle = .short
+        dateLabel.text = dateFormatterGet.string(from: Date())
         
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let dateFormatterGet = DateFormatter()
-        dateFormatterGet.locale = Locale(identifier: "en_US") //change to localizable
-        dateFormatterGet.dateStyle = .medium
-        dateFormatterGet.timeStyle = .short
-        dateLabel.text = dateFormatterGet.string(from: Date())
         
-
     }
 
-
-    @IBAction func updateScreen(_ sender: Any) {
-        descriptionLabel.text = ("Банка кока-колы в россии")
-    }
 }
 
