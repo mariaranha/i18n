@@ -20,6 +20,8 @@ class TableViewController: UITableViewController {
         super.viewDidLoad()
         let nib = UINib(nibName: "TableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "customCell")
+        tableView.estimatedRowHeight = 44
+        tableView.rowHeight = UITableView.automaticDimension
 
     }
 

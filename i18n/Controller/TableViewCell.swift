@@ -16,32 +16,61 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var didSelectImage: UIImageView!
     @IBOutlet weak var moveConstraint: NSLayoutConstraint!
     let defaultConstraint: CGFloat = -24
-    let maxConstraint: CGFloat = 80
+    let maxConstraint: CGFloat = 120
+    var animationStart = false
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         let pan = UIPanGestureRecognizer(target: self, action: #selector(swipeAction(gestureRecognizer:)))
+        pan.delegate = self
         self.addGestureRecognizer(pan)
     }
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
+    override func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        if let panGestureRecognizer = gestureRecognizer as? UIPanGestureRecognizer {
+            let translation = panGestureRecognizer.translation(in: self).x
+            let isRightToLeft = self.semanticContentAttribute == .forceRightToLeft
+            return isRightToLeft ? translation > 0 : translation < 0
+        } else {
+            return false
+        }
     }
     
-    @objc func swipeAction(gestureRecognizer: UIGestureRecognizer) {
-        if let pan = gestureRecognizer as? UIPanGestureRecognizer {
-            let translation = pan.translation(in: self).x
-            if translation < 0 && moveConstraint.constant >= maxConstraint{
-                // do something
-                UIView.animate(withDuration: 2) {
-                    self.moveConstraint.constant -= self.maxConstraint
+    @objc func swipeAction(gestureRecognizer: UIPanGestureRecognizer) {
+        
+        
+        
+        if gestureRecognizer.state == .changed {
+            let translation = abs(gestureRecognizer.translation(in: self).x)
+            UIView.animate(withDuration: 01, delay: 0, options: .allowUserInteraction, animations: {
+                if self.shouldMove(translation: translation) {
+                    self.moveConstraint.constant += translation
                 }
                 
+                self.layoutIfNeeded()
+            })
+          
+        } else if gestureRecognizer.state == .ended {
+            if self.shouldGoBack() {
+                self.moveConstraint.constant = self.defaultConstraint
+                self.layoutIfNeeded()
+            } else {
+                UIView.animate(withDuration: 0.2, animations: {
+                    self.moveConstraint.constant = self.maxConstraint
+                    self.layoutIfNeeded()
+                })
             }
         }
     }
+    
+    func shouldMove(translation: CGFloat) -> Bool {
+        return (abs(translation) + self.moveConstraint.constant < self.maxConstraint)
+    }
+    
+    func shouldGoBack() -> Bool {
+        return self.moveConstraint.constant < (maxConstraint/2)
+    }
+   
 }
