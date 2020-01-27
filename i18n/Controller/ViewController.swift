@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
     
     override func viewWillAppear(_ animated: Bool) {
+        //BACK BUTTON
 //        if (L10nLanguage.currentAppleLanguageFull() == "ar"){
 //            self.navigationController?.navigationBar.semanticContentAttribute = .forceRightToLeft
 //            self.navigationController?.view.semanticContentAttribute = .forceRightToLeft
@@ -21,18 +22,9 @@ class ViewController: UIViewController {
 //            self.navigationController?.view.semanticContentAttribute = .forceLeftToRight
 //        }
         
+        // DATE FORMATTER
+        
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        let dateFormatterGet = DateFormatter()
-        dateFormatterGet.locale = Locale(identifier: L10nLanguage.currentAppleLanguageFull()) //set by the table view controller
-        dateFormatterGet.dateStyle = .medium
-        dateFormatterGet.timeStyle = .short
-        dateLabel.text = dateFormatterGet.string(from: Date())
-
-    }
-
 
 }
 
